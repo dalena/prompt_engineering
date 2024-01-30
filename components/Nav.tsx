@@ -77,8 +77,8 @@ const techniques = [
 
 const Nav = () => {
     const [activeTab, setActiveTab] = useState(0);
-
-    const ActiveComponent = techniques.find(tech => tech.id === activeTab)?.component || <div>Select a technique</div>;
+    const DefaultComponent = () => <div>Select a technique</div>;
+    const ActiveComponent = techniques.find(tech => tech.id === activeTab)?.component || DefaultComponent;
 
     return (
         <div className="md:flex w-50 container max-h-[80vh]">
