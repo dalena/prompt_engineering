@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image'
 import MeChat from '@/components/MeChat';
 import GptChat from '@/components/GptChat';
 import Link from 'next/link';
@@ -10,7 +9,7 @@ const SyllabusCreation = () => {
   return (
     <div>
       <h1 className="font-sans font-bold text-2xl pb-4">Syllabus Creation</h1>
-      <h2 className='font-sans text-sm pb-4' >This example shows the prompting process that led to a customized syllabus for a 10 week course to learn the 3D Grphical Software Blender. This processs includes Iterative Development and Feedback, Retrieval Augmented Generation (RAG), and Rich Text formatting to LaTex code conversions. The syllabus LaTex code generated from this conversation was manually <Link href="href='/docs/Syllabus_Generator.pdf">converted into a PDF</Link> using a LaTex Code Editor.</h2>
+      <h2 className='font-sans text-sm pb-4' >This example shows the prompting process that led to a customized syllabus for a 10 week course to learn the 3D Grphical Software Blender. This processs includes Content Generation, Iterative Development and Feedback, and Rich Text formatting to LaTex code conversions. The syllabus LaTex code generated from this conversation was manually <Link target="_blank" href="/docs/Syllabus_Generator.pdf">converted into a PDF</Link> using a LaTex Code Editor.</h2>
       <MeChat
         message="You are a syllabus generator. You will help me design a custom syllabus to learn the fundamentals of Blender, a 3D graphical software. Starting today, I have 10 weeks. By the end of the 10 weeks, I want to be able to have a good grasp on how to use the software for general purpose. The syllabus should include a course summary and a detailed schedule.  My study days are Monday, Wednesday, and Thursday. Each study day should have a lesson. For each lesson, you will search online for the most relevant, recent, and popular YouTube Video that addresses the lesson for that day.  The first week should start with the very basics and each consecutive week becomes more advanced.  There should be relevant assignments at the end of each work week. They are due the following Sunday. Each assignment should apply the learned material  and build up in complexity into the final week when the Final Project is due.
         "
@@ -137,6 +136,35 @@ const SyllabusCreation = () => {
         htmlContent="
       <p><i>***Note: GPT generates Week 3 links in the same response format, asking me each time if it should continue iterating through the weeks. I respond 'yes' each time. The generation stops when reaching Week 10***</i></p>
       "
+      />
+      <MeChat
+        message="Can you please look through all of the weekly assignments and make them more entertaining, engaging, and relevant to the lesson plan from that week"
+      />
+      <GptChat
+      message=""
+      htmlContent="<h2>Revised Weekly Assignments</h2>
+
+      <h3>Week 1: Introduction to Blender</h3>
+      <p>Design a mini 3D park using basic shapes. Include trees, benches, and a pathway, focusing on creatively using different shapes.</p>
+      <h3>Week 2: Modeling Basics</h3>
+      <p>Create a themed chess set with each piece representing a different character or object, using basic modeling techniques.</p>
+      <h3>Week 3: Advanced Modeling Techniques</h3>
+      <p>Design a futuristic vehicle using advanced modeling techniques. Add textures for a realistic or sci-fi look.</p>
+      <h3>Week 4: Materials and Texturing</h3>
+      <p>Create a small virtual room and apply different textures and materials to objects like walls, furniture, and decor.</p>
+      <h3>Week 5: Lighting and Rendering</h3>
+      <p>Stage a dramatic scene (like a moody café or a bright beach scene) and use lighting to set the mood. Experiment with camera angles.</p>
+      <h3>Week 6: Animation Basics</h3>
+      <p>Create a short story where an inanimate object comes to life and navigates through an obstacle course, using keyframe animation.</p>
+      <h3>Week 7: Advanced Animation</h3>
+      <p>Animate a dance routine for a character, focusing on fluid motion and expression.</p>
+      <h3>Week 8: Simulation and Effects</h3>
+      <p>Design a magical scene with particle effects, like a wizard casting a spell or a forest with floating lights.</p>
+      <h3>Week 9: Compositing and Post-Processing</h3>
+      <p>Create a short clip integrating a 3D object into real-life footage, using compositing to make the integration seamless.</p>
+
+      <h3>Week 10: Final Project</h3>
+      <p>Develop a comprehensive 3D project that tells a story or showcases a concept, incorporating all learned skills.</p>"
       />
       <MeChat
         message="Now with all of your generated information, augment the course syllabus with the links you have gathered into a single syllabus format that is easy to understand and follow. Additionally turn this into a simple LaTex file, formatted similar to how you have displayed it to me.  Please generate the code into 4 parts, and don't miss anything. Please take your time.

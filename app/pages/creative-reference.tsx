@@ -1,12 +1,12 @@
 import React from 'react';
-import Image from 'next/image'
 import MeChat from '@/components/MeChat';
 import GptChat from '@/components/GptChat';
 
-const PromptA = () => {
+const CreativeReference = () => {
   return (
     <div>
-      <h1 className="font-sans font-bold text-2xl pb-6">Iterative Refinement</h1>
+      <h1 className="font-sans font-bold text-2xl pb-6">Visualization for Creative Reference</h1>
+      <h2 className='font-sans text-sm pb-4' >This example shows the prompting process of knowledge generation, prompt-chaining, iterative refinement, and a cross-modal process between text-based information and image generation. It can be used to generate reference and mood board material for creative practices.</h2>
       <MeChat
         message="Generate a comprehensive list of the plants native to Fynbos, Cape Town"
       />
@@ -67,4 +67,4 @@ const PromptA = () => {
   );
 };
 
-export default PromptA;
+export default CreativeReference;

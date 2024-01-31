@@ -72,3 +72,25 @@ body {
   font-weight: bold;
   text-decoration: underline;
 }
+
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrolly::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrolly {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: thin;  /* Firefox */
+}
+
+/* Handle */
+.scrolly::-webkit-scrollbar-thumb {
+  background: #955cf6;
+}
+
+/* Handle on hover */
+.scrolly::-webkit-scrollbar-thumb:hover {
+  background: #b300b3;
+}

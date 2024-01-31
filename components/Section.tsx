@@ -1,5 +1,5 @@
-import FewShot from '@/app/syllabus-creation/page';
-import ZeroShot from '@/app/prompt-a/page';
+import FewShot from '@/app/pages/syllabus-creation';
+import ZeroShot from '@/app/pages/creative-reference';
 
 const Section = () => {
     return (
