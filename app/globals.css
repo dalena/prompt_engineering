@@ -103,3 +103,76 @@ h2 a {
 .scrolly::-webkit-scrollbar-thumb:hover {
   background: #b300b3;
 }
+
+/* Responsive */
+header {
+  z-index: 1000;
+}
+
+.nav-container {
+  display: block;
+
+}
+
+
+.nav-visible {
+  position: fixed;
+  top: 8vh;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1;
+  background-color: rgb(241 233 254);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  transition: transform .7s ease, visibility 0.3s ease, opacity 0.4s linear;
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  overflow-y: auto;
+}
+
+.nav-hidden {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+  transform: translateY(-100%);
+  transition: transform 0.9s ease, visibility 0.3s ease 0.3s, opacity 0.9s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.hamburger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+
+  .hamburger,
+  .close-icon {
+    display: block;
+  }
+
+  .promptMenu {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav-visible .nav-container {
+    display: block;
+  }
+
+  .nav-visible .promptMenu {
+    border-radius: 0;
+  }
+
+  .nav-container {
+    display: none;
+  }
+
+
+}
