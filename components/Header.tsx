@@ -22,7 +22,7 @@ const Header = () => {
             {isMenuOpen ? (<div className="close-icon"><FiX size={30} /></div>) : (<div className="hamburger"><FiMenu size={30} /></div>)}
           </div>
           <div className={isMenuOpen ? "nav-visible" : "nav-hidden"}>
-            <Nav isMenuOpen={isMenuOpen} techniques={techniques} activeTab={activeTab} setActiveTab={setActiveTab} />
+            <Nav />
           </div>
         </div>
       </div>
