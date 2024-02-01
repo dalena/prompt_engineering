@@ -20,7 +20,7 @@ const techniques = [
     },
     {
         id: 2,
-        name: 'Multi-Agent Panel Discussion',
+        name: 'Multi-Agent Dinner Party Discussion',
         href: '/multi-agent-panel',
         component: MultiAgentPanel,
     },
