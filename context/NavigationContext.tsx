@@ -16,6 +16,8 @@ interface NavigationContextType {
     techniques: Technique[];
     activeTab: number;
     setActiveTab: (id: number) => void;
+    isMenuOpen: boolean;
+    setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const NavigationContext = createContext<NavigationContextType | undefined>(undefined);
@@ -30,6 +32,7 @@ export const useNavigation = () => {
 
 export const NavigationProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [activeTab, setActiveTab] = useState(0);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
     const techniques: Technique[] = [
         {
             id: 0,
@@ -58,7 +61,7 @@ export const NavigationProvider: React.FC<{ children: React.ReactNode }> = ({ ch
     ];
 
     return (
-        <NavigationContext.Provider value={{ techniques, activeTab, setActiveTab }}>
+        <NavigationContext.Provider value={{ techniques, activeTab, setActiveTab, isMenuOpen, setIsMenuOpen }}>
             {children}
         </NavigationContext.Provider>
     );

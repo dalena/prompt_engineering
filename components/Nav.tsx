@@ -7,12 +7,6 @@ interface Technique {
     href: string;
     component: React.ComponentType<any>;
 }
-interface NavProps {
-    isMenuOpen: boolean;
-    techniques: Technique[];
-    activeTab: number;
-    setActiveTab: (id: number) => void;
-}
 
 const Nav = () => {
     const { techniques, activeTab, setActiveTab, isMenuOpen } = useNavigation();
