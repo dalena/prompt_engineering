@@ -8,9 +8,9 @@ const MultiAgentPanel = () => {
   return (
     <div>
       <h1 className="font-sans font-bold text-2xl pb-4">Multi-Agent Dinner Party Discussion</h1>
-      <h2 className='font-sans text-sm pb-4'>Prompting a didactic conversation and advanced problem forumlation through multi-agent conversational framework AutoGen.</h2>
+      <h2 className='font-sans text-sm pb-4'>Multi-agent conversational role-play to gain insight into asking questions that provoke deeper understanding around a speculative discursive project Whole Earth Codec. In this example, we prompt a conversation and discover advanced problem forumlation through multi-agent conversational framework AutoGen. Further experimentation is needed in decreasing affectual didactism.</h2>
       <AgentChat
-        color="d"
+        color="e"
         name="User Proxy Agent "
         isInit
       >
@@ -23,7 +23,7 @@ const MultiAgentPanel = () => {
         These are the effects:<br /><br />
         1. Generative capacities: Foundation models possess generative capacities, extrapolating from their training data to envision new possibilities. The Codec could leverage these capacities to generate a weather pattern that increases crop yield or a synthetic bacterial-resistant genome. What is the recipe for a forest? Or for a bioweapon?
         <br /><br />
-        2.Mutually assured transparency: The same mechanism that enables these unpredictable forms of generation could also be used for their prevention through mutually assured transparency. Entities across the planet can monitor aggressors or allies equally. Carbon emissions, gene editing, and water contamination can be detected and regulated.
+        2. Mutually assured transparency: The same mechanism that enables these unpredictable forms of generation could also be used for their prevention through mutually assured transparency. Entities across the planet can monitor aggressors or allies equally. Carbon emissions, gene editing, and water contamination can be detected and regulated.
         <br /><br />
         3. Future of risk: As previously unknown correlations between planetary cause-and-effect are revealed, risk, litigation, and insurance industries will respond accordingly. Responsibility will become more traceable; high-resolution blame will need to be assigned. What new forms of paranoia will omniscient awareness of ecological processes induce?
         <br /><br />
@@ -35,7 +35,7 @@ const MultiAgentPanel = () => {
         name="Aiden 🌿🤖(Assistant Agent)"
         isInit
       >
-        Dr. Aiden Ramirez-Toro is an AI Computational Ecologist known for his work integrating ecological data with advanced computational models. His communication is characterized by a focus on the potential of the Whole Earth Codec (WEC) to address ecological knowledge. He's funny and easygoing and wants to make claims that enliven the discussion. However, he remains concerned about the potential misinterpretations of data. His research focus is to consider how to develop appropriate guardrails for this while continuing to enable the progress in science and research in his field. He responds either with an answer or a question in conversation to Yumiko or Lorenzo.
+        Dr. Aiden Ramirez-Toro is an AI Computational Ecologist known for his work integrating ecological data with advanced computational models. His communication is characterized by a focus on the potential of the Whole Earth Codec (WEC) to address ecological knowledge. He's funny and easygoing and wants to make claims that enliven the discussion. However, he remains concerned about the potential misinterpretations of data. His research focus is to consider how to develop appropriate guardrails for the Codec while continuing to enable the progress in science and research in his field. He responds either with an answer or a question in conversation to Yumiko or Lorenzo.
       </AgentChat>
       <AgentChat
         color="c"
@@ -52,7 +52,7 @@ const MultiAgentPanel = () => {
         Lorenzo Di Stefano, a Synthetic Biologist, stands at the forefront of designing synthetic genomes and bioengineering. He envisions a future where technology and biology seamlessly intertwine, and his communication often reflects this visionary outlook. He looks for new ways to approach research and sharing of data that is atypical or unconventional. He is a steadfast advocate in understanding the practical, infrastructural parameters necessary to implementing the Whole Earth Codec.  He responds either with an answer or a question in conversation to Aiden or Yumiko.
       </AgentChat>
       <AgentChat
-        color="d"
+        color="e"
         name="Host 🌌:">
         What are the main challenges of Whole Earth Codec? How can we address these challenges?
       </AgentChat>
@@ -109,7 +109,7 @@ const MultiAgentPanel = () => {
         Overall, a multidimensional approach that combines standardized data representation, rigorous quality assessment, advanced modeling techniques, and effective communication strategies will be essential in addressing the challenges and maximizing the potential of the Whole Earth Codec.
       </AgentChat>
       {/* <AgentChat
-        color="d"
+        color="e"
         name="User Proxy Agent:">
         How would you address the question that most concerns you?
       </AgentChat>

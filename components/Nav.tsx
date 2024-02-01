@@ -4,6 +4,7 @@ import { useState } from 'react';
 import SyllabusCreation from '@/app/pages/syllabus-creation';
 import CreativeReference from '@/app/pages/creative-reference';
 import MultiAgentPanel from '@/app/pages/multi-agent-panel';
+import anotherWindow from '@/app/pages/another-window-ss';
 
 const techniques = [
     {
@@ -23,6 +24,12 @@ const techniques = [
         name: 'Multi-Agent Dinner Party Discussion',
         href: '/multi-agent-panel',
         component: MultiAgentPanel,
+    },
+    {
+        id: 3,
+        name: 'Short Story: Another Window',
+        href: '/another-window-ss',
+        component: anotherWindow,
     },
 ];
 

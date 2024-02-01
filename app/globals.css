@@ -68,9 +68,16 @@ body {
   font-size: .9rem;
 }
 
-.gptChat a, h2 a{
+.gptChat a,
+h2 a {
   font-weight: bold;
   text-decoration: underline;
+}
+
+.gptChat,
+.meChat {
+  border-radius: 1.5em;
+  padding: 1em;
 }
 
 
@@ -81,13 +88,15 @@ body {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .scrolly {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: thin;  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: thin;
+  /* Firefox */
 }
 
 /* Handle */
 .scrolly::-webkit-scrollbar-thumb {
-  background: #955cf6;
+  background: #955cf6 !important;
 }
 
 /* Handle on hover */
