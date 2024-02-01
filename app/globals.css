@@ -90,18 +90,19 @@ h2 a {
 .scrolly {
   -ms-overflow-style: none;
   /* IE and Edge */
-  scrollbar-width: thin;
+  /* scrollbar-width: thin; */
   /* Firefox */
 }
 
 /* Handle */
 .scrolly::-webkit-scrollbar-thumb {
-  background: #955cf6 !important;
+  background: #b48bfa;
+  border-radius: 10px;
 }
 
 /* Handle on hover */
 .scrolly::-webkit-scrollbar-thumb:hover {
-  background: #b300b3;
+  background: #7c3aed;
 }
 
 /* Responsive */
