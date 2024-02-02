@@ -2,7 +2,6 @@
 import { usePathname } from 'next/navigation'
 
 import Link from 'next/link';
-import { useState } from 'react';
 
 
 const techniques = [
@@ -38,10 +37,10 @@ const Nav: React.FC<NavProps> = ({ callback, isMenuOpen }) => {
 
     return (
         <div className={isMenuOpen ? "nav-container nav-visible" : "nav-container"}>
-            <ul className="promptMenu h-[100%] flex flex-col rounded-lg border-l-8 space-y-4 text-sm font-medium text-purpz-800 bg-purpz-50 dark:text-gray-400 mb-4 md:mb-0">
+            <ul className="promptMenu min-w-[250px] min-h-[100%] flex flex-col rounded-lg border-l-8 space-y-4 text-sm font-medium text-purpz-800 bg-purpz-50 dark:text-gray-400 mb-4 md:mb-0">
                 {techniques.map((technique) => (
                     <li key={technique.id}>
-                        <Link href={technique.href} className={`font-sans inline-flex items-center px-8 py-3 w-full ${pathname === technique.href ? 'bg-purpz-300 text-purpz-800 font-bold' : 'text-purpz-400 dark:bg-blue-600'}`}
+                        <Link href={technique.href} className={`font-sans transition-colors ease-in-out delay-50 duration-300 inline-flex items-center px-8 py-3 w-full hover:bg-purpz-300 hover:text-purpz-800 ${pathname === technique.href || (pathname === '/' && technique.id === 0) ? 'bg-purpz-300 text-purpz-800 font-bold' : 'text-purpz-400 dark:bg-blue-600'}`}
                             onClick={(e) => {
                                 callback && callback();
                             }}>

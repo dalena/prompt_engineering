@@ -107,11 +107,12 @@ h2 a {
 
 /* Responsive */
 header {
-  z-index: 1000;
+  z-index: 1000 !important;
 }
 
 .nav-container {
-  display: block;
+  display: contents;
+  height: 100%;
 
 }
 
@@ -121,17 +122,17 @@ header {
   top: 8vh;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 1;
   background-color: rgb(241 233 254);
   display: flex;
   flex-direction: column;
   justify-content: start;
   transition: transform .7s ease, visibility 0.3s ease, opacity 0.4s linear;
-  transform: translateY(0);
+  /* transform: translateY(-3%); */
   opacity: 1;
   visibility: visible;
-  overflow-y: auto;
+  overflow-y: hidden;
 }
 
 .nav-hidden {
@@ -139,10 +140,10 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   z-index: 100;
-  transform: translateY(-100%);
-  transition: transform 0.9s ease, visibility 0.3s ease 0.3s, opacity 0.9s ease;
+  /* transform: translateY(-10%); */
+  transition: transform 0.9s ease, visibility 0.3s ease 0.3s, opacity 0.6s ease;
   opacity: 0;
   visibility: hidden;
 }
@@ -151,7 +152,7 @@ header {
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 850px) {
 
   .hamburger,
   .close-icon {
