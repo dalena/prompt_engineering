@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { NavigationProvider } from '../context/NavigationContext';
 import { Anonymous_Pro } from "next/font/google";
 import "./globals.css";
 import Header from "../components/Header";
@@ -23,17 +22,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <NavigationProvider>
-      <html lang="en">
-        <Head>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-        <body className={anonpro.className}>
-          <Header />
-          <Main />
-          <Footer />
-        </body>
-      </html>
-    </NavigationProvider>
+    <html lang="en">
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <body className={anonpro.className}>
+        <Header />
+        <Main >
+          {children}
+        </Main>
+        <Footer />
+      </body>
+    </html>
   );
 }

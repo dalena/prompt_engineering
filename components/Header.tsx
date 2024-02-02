@@ -1,5 +1,4 @@
 "use client";
-import { useNavigation } from '../context/NavigationContext';
 import { useState } from 'react';
 import Link from 'next/link';
 import Nav from './Nav';
@@ -8,7 +7,6 @@ import { FiMenu, FiX } from 'react-icons/fi';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { techniques, activeTab, setActiveTab } = useNavigation();
 
   return (
     <header className="mx-auto px-4 bg-purpz-100 text-purpz-900 flex flex-col justify-center items-center h-[8vh]">
@@ -22,7 +20,7 @@ const Header = () => {
             {isMenuOpen ? (<div className="close-icon"><FiX size={30} /></div>) : (<div className="hamburger"><FiMenu size={30} /></div>)}
           </div>
           <div className={isMenuOpen ? "nav-visible" : "nav-hidden"}>
-            <Nav />
+            <Nav isMenuOpen={isMenuOpen} callback={() => setIsMenuOpen(false)} />
           </div>
         </div>
       </div>

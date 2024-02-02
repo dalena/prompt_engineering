@@ -1,24 +1,49 @@
 "use client";
-import { useNavigation } from '../context/NavigationContext';
+import { usePathname } from 'next/navigation'
+
 import Link from 'next/link';
-interface Technique {
-    id: number;
-    name: string;
-    href: string;
-    component: React.ComponentType<any>;
+import { useState } from 'react';
+
+
+const techniques = [
+    {
+        id: 0,
+        name: 'Syllabus Creation',
+        href: '/syllabus-creation',
+    },
+    {
+        id: 1,
+        name: 'Visualization for Creative Reference',
+        href: '/iterative-refinement',
+    },
+    {
+        id: 2,
+        name: 'Multi-Agent Dinner Party Discussion',
+        href: '/multi-agent-panel',
+    },
+    {
+        id: 3,
+        name: 'Short Story: Another Window',
+        href: '/another-window-ss',
+    },
+];
+
+interface NavProps {
+    callback?: () => void
+    isMenuOpen?: boolean
 }
 
-const Nav = () => {
-    const { techniques, activeTab, setActiveTab, isMenuOpen } = useNavigation();
+const Nav: React.FC<NavProps> = ({ callback, isMenuOpen }) => {
+    const pathname = usePathname()
+
     return (
         <div className={isMenuOpen ? "nav-container nav-visible" : "nav-container"}>
             <ul className="promptMenu h-[100%] flex flex-col rounded-lg border-l-8 space-y-4 text-sm font-medium text-purpz-800 bg-purpz-50 dark:text-gray-400 mb-4 md:mb-0">
                 {techniques.map((technique) => (
                     <li key={technique.id}>
-                        <Link href={technique.href} className={`font-sans inline-flex items-center px-8 py-3 w-full ${activeTab === technique.id ? 'bg-purpz-300 text-purpz-800 font-bold' : 'text-purpz-400 dark:bg-blue-600'}`}
+                        <Link href={technique.href} className={`font-sans inline-flex items-center px-8 py-3 w-full ${pathname === technique.href ? 'bg-purpz-300 text-purpz-800 font-bold' : 'text-purpz-400 dark:bg-blue-600'}`}
                             onClick={(e) => {
-                                e.preventDefault();
-                                setActiveTab(technique.id);
+                                callback && callback();
                             }}>
                             {technique.name}
                         </Link>
