@@ -10,7 +10,9 @@ const anotherWindow = () => {
             <h1 className="font-sans font-bold text-2xl pb-4">Another Window</h1>
             <h2 className='font-sans text-sm pb-4'>A young boy is sent into space for Flat Earth converstion therapy. A short science fiction written with GPT-3. </h2>
             {/* You can read the final version <Link href="">here</Link>. */}
-            <img src="/img/anotherWindow.png" alt="Another Window" className="w-full pb-2" />
+            <div className='border-purpz border-2 p-1 rounded-lg border-dotted mb-2'>
+                <img src="/img/anotherWindow.png" alt="Another Window" className=" rounded-lg" />
+            </div>
             <p className="text-sm pb-2 italic">Image generated with Midjourney using the prompt "airplane window view of earth from space. --ar 16:9 --v 5.1 - Image #2"</p>
             <AgentChat
                 color="e"
